@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagination</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Js -->
+
+
+</head>
+
+
+<body >
+
+  
+    <div class="container">
+      <header>
+          <h1>קופות גמל להשקעה - טבלת השוואות </h1>
+        </header> 
+        <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="חיפוש קופה..."> -->
+        <div class="row" id="rowdate">
+        <div class="date col-9"></div>
+        <div class="date1 col-3" > :הנתונים מעודכנים נכון לתאריך </div>
+        </div>
+      <table class="table-sortable "id="myTable2" >
+      <thead>
+        <tr>
+          <th   class="col">שם הקופה</th>
+          <th  class="col">תשואה שנה אחרונה</th>
+          <th   class="col">תשואה 5 שנים</th>
+          <th   class="col">מדד שארפ</th>
+          <th   class="col">❔ דמי ניהול</th>
+        </tr>
+      </thead>
+        <tbody class="output">
+        </tbody>
+      </table>
+        <div class="pages" ></div>
+    </div>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script src="app.js"></script>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,100);
+
+      table {
+        width: 100%;
+        direction: rtl;
+        background-color: aliceblue;
+            
+      }
+  
+      th{
+        text-align: center;
+        background-color: rgba(17, 16, 16, 0.712);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        
+      }
+
+      tr:hover {
+  background: rgba(198, 227, 228, 0.822);
+}
+  
+      td{
+        text-align: center;
+        border: 1px solid #ddd;
+        padding : 5px;
+
+      }
+
+    
+      header{
+        padding: 10px;
+        text-align: right;
+      }
+  
+  
+ .pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgb(226, 220, 220);
+  border-radius: 30px;
+  margin-top: 6px;
+
+}
+.pages span {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #2E2929;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color .25s ease-in-out;
+}
+.pages span:hover {
+  background: rgba(189, 231, 233, 0.822);
+}
+/* 
+#myInput{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 7px;
+  direction: rtl; 
+  border-radius: 10px;
+  justify-content: right;
+} */
+
+
+#rowdate{
+  margin-bottom: 10px;
+}
+
+.date{
+  text-align: right;
+  
+}
+
+.date1{
+  text-align: left;
+ padding-bottom: 5px;
+}
+.table-sortable th {
+  cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "\25be";
+  
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-right: 10px;
+
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(198, 227, 228, 0.822);
+  color : rgba(17, 16, 16, 0.712);
+}
+
+    </style>
+</body>
+</html>
+
